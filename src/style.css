@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Mode (Default) */
+html,
+body {
+  background-color: #fafaff !important;
+  color: #1a1a1a !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  background-color: #f3f4f6 !important;
+  color: #1a1a1a !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main__item {
+  background-color: #4b5563 !important;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode */
+html.dark-mode,
+body.dark-mode {
+  background-color: #1a1a1a !important;
+  color: #fafaff !important;
+}
+
+.dark-mode .parent {
+  background-color: #2d3748 !important;
+  color: #fafaff !important;
+}
+
+.dark-mode .main__item {
+  background-color: #4a5568 !important;
+}
+
+.dark-mode #searchBtn {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+/* Input field styles */
+#cityInput {
+  background-color: #e5e7eb !important;
+  color: #1a1a1a !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode #cityInput {
+  background-color: #4a5568 !important;
+  color: #fafaff !important;
+}
+
+/* Toggle button styles */
+#themeToggle {
+  background-color: #4b5563 !important;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode #themeToggle {
+  background-color: #2d3748 !important;
+}
+
+#toggleCircle {
+  background-color: white !important;
+  transition: transform 0.3s ease;
+}

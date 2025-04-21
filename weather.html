@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/style.css" rel="stylesheet" />
+    <title>Vite App</title>
+    <style>
+      :root {
+        --grey--light: #fafaff;
+        --white: rgb(55 65 81);
+      }
+
+      .main {
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .main__item {
+        background: var(--white);
+        border-radius: 4px;
+        padding: 10px;
+        display: inline-block;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .main__item svg {
+        width: 20px;
+        height: 20px;
+        stroke: white;
+        stroke-width: 2;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        fill: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div
+      class="bg-gray-800 text-gray-100 p-6 rounded-lg shadow-lg w-full max-w-md mx-auto parent"
+    >
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center">
+          <span class="text-2xl mr-2">🌦️</span>
+          <h1 class="text-xl font-mono">Weather App</h1>
+        </div>
+        <div class="main">
+          <div class="main__item">
+            <svg
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-labelledby="refreshIconTitle"
+            >
+              <title id="refreshIconTitle">Refresh</title>
+              <polyline points="22 12 19 15 16 12"></polyline>
+              <path
+                d="M11,20 C6.581722,20 3,16.418278 3,12 C3,7.581722 6.581722,4 11,4 C15.418278,4 19,7.581722 19,12 L19,14"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <button
+          id="themeToggle"
+          class="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors"
+        >
+          <div
+            id="toggleCircle"
+            class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 z-10"
+          ></div>
+        </button>
+      </div>
+
+      <div class="border-b border-gray-700 mb-4"></div>
+
+      <div class="mb-4 flex gap-2">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter City Name"
+          class="flex-1 bg-gray-700 text-gray-100 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+        />
+        <button
+          id="searchBtn"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-mono"
+        >
+          Go
+        </button>
+      </div>
+
+      <div class="border-b border-gray-700 mb-4"></div>
+
+      <div class="space-y-3 font-mono">
+        <div class="flex items-center">
+          <span class="mr-2">📍</span>
+          <span>City: </span>
+          <span id="cityName" class="ml-2"></span>
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">🌡️</span>
+          <span>Temp: </span>
+          <span id="temperature" class="ml-2"></span>
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">☁️</span>
+          <span>Condition: </span>
+          <span id="condition" class="ml-2"></span>
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">💧</span>
+          <span>Humidity: </span>
+          <span id="humidity" class="ml-2"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>

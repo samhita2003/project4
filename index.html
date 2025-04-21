@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/style.css" rel="stylesheet" />
+    <title>Welcome to Weather App</title>
+    <style>
+      /* Light Mode (Default) */
+      html,
+      body {
+        background-color: #fafaff !important;
+        color: #1a1a1a !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .dark-mode {
+        background-color: #1a1a1a !important;
+        color: #fafaff !important;
+      }
+
+      .dark-mode .card {
+        background-color: #2d3748 !important;
+        color: #fafaff !important;
+      }
+
+      .dark-mode .feature-card {
+        background-color: #4a5568 !important;
+        color: #fafaff !important;
+      }
+
+      .dark-mode .text-gray-400 {
+        color: #a0aec0 !important;
+      }
+
+      .dark-mode #goBtn {
+        background-color: #2563eb !important;
+      }
+
+      .card {
+        background-color: #f3f4f6 !important;
+        color: #1a1a1a !important;
+      }
+
+      .feature-card {
+        background-color: #e5e7eb !important;
+        color: #1a1a1a !important;
+      }
+
+      #goBtn {
+        background-color: #3b82f6 !important;
+        color: white !important;
+      }
+/* 
+
+      @media screen and (min-width: 577px) and (max-width: 992px) {
+
+      }
+ */
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div class="card p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div class="text-center mb-8">
+        <span class="text-6xl mb-4 block">🌦️</span>
+        <button
+          id="themeToggle"
+          class="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors"
+        >
+          <div
+            id="toggleCircle"
+            class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 z-10"
+          ></div>
+        </button>
+        <h1 class="text-3xl font-bold mb-2">Welcome to Weather App</h1>
+        <p class="text-gray-400">Get real-time weather updates for any city</p>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="feature-card flex items-center p-4 rounded-lg">
+          <span class="text-2xl mr-4">📍</span>
+          <div>
+            <h3 class="font-semibold">Search Any City</h3>
+            <p class="text-sm text-gray-400">
+              Enter a city name to get started
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card flex items-center p-4 rounded-lg">
+          <span class="text-2xl mr-4">🌡️</span>
+          <div>
+            <h3 class="font-semibold">Real-time Updates</h3>
+            <p class="text-sm text-gray-400">
+              Get current temperature and conditions
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card flex items-center p-4 rounded-lg">
+          <span class="text-2xl mr-4">🌙</span>
+          <div>
+            <h3 class="font-semibold">Dark/Light Mode</h3>
+            <p class="text-sm text-gray-400">
+              Toggle between themes for better viewing
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <button
+          id="goBtn"
+          class="hover:bg-blue-700 text-white px-4 py-2 rounded font-mono"
+        >
+          Get started
+        </button>
+      </div>
+    </div>
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
