@@ -1,5 +1,7 @@
 import "./style.css";
 
+"use strict";
+
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
 const btn = document.getElementById("goBtn");
@@ -122,7 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (parent) parent.classList.add("dark-mode");
       if (mainItem) mainItem.classList.add("dark-mode");
       if (searchBtn) searchBtn.classList.add("dark-mode");
-      if (toggle) toggle.style.transform = "translateX(30px)";
+      if (toggle) toggle.classList.add("forward");
+      toggle.style.transform = "";
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark-mode");

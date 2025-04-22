@@ -7,6 +7,9 @@
     <link href="dist/style.css" rel="stylesheet" />
     <title>Welcome to Weather App</title>
     <style>
+       #toggleCircle.forward {
+       transform: translateX(30px);
+      }
       /* Light Mode (Default) */
       html,
       body {
@@ -52,18 +55,194 @@
         background-color: #3b82f6 !important;
         color: white !important;
       }
-/* 
-
-      @media screen and (min-width: 577px) and (max-width: 992px) {
-
+ 
+      @media screen and (min-width: 344px) and (max-width: 400px) {
+        .parent{
+          width: 15rem !important;
+        }
+        .child{
+          font-size: 1rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 12rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
       }
- */
+ 
+      @media screen and (min-width: 401px) and (max-width: 500px) {
+        .parent{
+          width: 25rem !important;
+        }
+        .child{
+          font-size: 1.2rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 15rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
+      }
+
+      @media screen and (min-width: 501px) and (max-width: 600px) {
+        .parent{
+          width: 30rem !important;
+        }
+        .child{
+          font-size: 1.5rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 20rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .childCard>div>h3{
+          font-size: 1.5rem;
+        }
+        .childCard>div>p{
+          font-size: 1.2rem;
+        }
+        .childCard>span{
+          font-size: 2rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
+      }
+        @media screen and (min-width: 601px) and (max-width: 700px) {
+        .parent{
+          width: 35rem !important;
+        }
+        .child{
+          font-size: 1.5rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 25rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .childCard>div>h3{
+          font-size: 1.5rem;
+        }
+        .childCard>div>p{
+          font-size: 1.2rem;
+        }
+        .childCard>span{
+          font-size: 2rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
+      }
+      @media screen and (min-width: 701px) and (max-width: 800px) {
+        .parent{
+          width: 40rem !important;
+        }
+        .child{
+          font-size: 1.8rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 30rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .childCard>div>h3{
+          font-size: 1.5rem;
+        }
+        .childCard>div>p{
+          font-size: 1.2rem;
+        }
+        .childCard>span{
+          font-size: 2rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
+      }
+      @media screen and (min-width: 801px) and (max-width: 900px) {
+        .parent{
+          width: 45rem !important;
+        }
+        .child{
+          font-size: 2rem !important;
+          padding: 0.5rem;
+        }
+        .childCard{
+          width: 35rem !important;
+          margin: auto;
+        }
+        #themeToggle,.cloud{
+          margin-top: 1rem;
+        }
+        #goBtn{
+          margin-bottom: 1rem;
+          font-size: 2rem;
+        }
+        .childCard>div>h3{
+          font-size: 1.8rem;
+        }
+        .childCard>div>p{
+          font-size: 1.2rem;
+        }
+        .childCard>span{
+          font-size: 2rem;
+        }
+        #toggleCircle.forward {
+          transform: translateX(20px);
+        }
+      }
+
+      @media screen and (min-width: 901px) and (max-width: 1400px) {
+        .parent{
+          max-width: 28rem !important;
+        }
+      }
+      
     </style>
   </head>
-  <body class="min-h-screen flex items-center justify-center p-4">
-    <div class="card p-8 rounded-lg shadow-lg w-full max-w-md">
+  <body class="min-h-screen flex items-center justify-center">
+    <div class="card rounded-lg shadow-lg w-full parent m-4">
       <div class="text-center mb-8">
-        <span class="text-6xl mb-4 block">🌦️</span>
+        <span class="text-6xl m-4 block cloud">🌦️</span>
         <button
           id="themeToggle"
           class="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors"
@@ -73,12 +252,12 @@
             class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 z-10"
           ></div>
         </button>
-        <h1 class="text-3xl font-bold mb-2">Welcome to Weather App</h1>
-        <p class="text-gray-400">Get real-time weather updates for any city</p>
+        <h1 class="text-3xl font-bold mb-2 child">Welcome to Weather App</h1>
+        <p class="text-gray-400 child">Get real-time weather updates for any city</p>
       </div>
       
       <div class="space-y-4">
-        <div class="feature-card flex items-center p-4 rounded-lg">
+        <div class="feature-card flex items-center p-4 rounded-lg childCard m-6">
           <span class="text-2xl mr-4">📍</span>
           <div>
             <h3 class="font-semibold">Search Any City</h3>
@@ -88,7 +267,7 @@
           </div>
         </div>
 
-        <div class="feature-card flex items-center p-4 rounded-lg">
+        <div class="feature-card flex items-center p-4 rounded-lg childCard m-6">
           <span class="text-2xl mr-4">🌡️</span>
           <div>
             <h3 class="font-semibold">Real-time Updates</h3>
@@ -98,7 +277,7 @@
           </div>
         </div>
 
-        <div class="feature-card flex items-center p-4 rounded-lg">
+        <div class="feature-card flex items-center p-4 rounded-lg childCard m-6">
           <span class="text-2xl mr-4">🌙</span>
           <div>
             <h3 class="font-semibold">Dark/Light Mode</h3>
@@ -109,7 +288,7 @@
         </div>
       </div>
 
-      <div class="mt-8 text-center">
+      <div class="mt-8 text-center mb-4">
         <button
           id="goBtn"
           class="hover:bg-blue-700 text-white px-4 py-2 rounded font-mono"
