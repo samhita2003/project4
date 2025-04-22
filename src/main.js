@@ -1,6 +1,6 @@
 import "./style.css";
 
-"use strict";
+("use strict");
 
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -14,7 +14,7 @@ if (parentEle) {
       localStorage.setItem("city", e.target.value);
     }
   });
-  
+
   parentEle.addEventListener("click", (event) => {
     if (
       event.target.id === "searchBtn" &&
@@ -37,9 +37,7 @@ if (parentEle) {
       console.log("select something!");
     }
   });
-  
 }
-
 
 let obj = {
   backgroundColor: "red",
@@ -106,8 +104,6 @@ if (refresh) {
     window.location.reload();
   });
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("toggleCircle");
